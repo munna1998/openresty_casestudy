@@ -1,5 +1,10 @@
 - hosts: local
   tasks:
-    - name: install openresty
-      command: sh /home/sumanth/openresty/install.sh
+   - name: install openresty
+     shell: /home/ubuntu/openresty/install.sh
+   - name: Download docker installer
+     get_url: url=https://get.docker.com/ dest=/tmp/docker-installer.sh mode=0755
+   - name: Install Docker
+     shell: /tmp/docker-installer.sh
+
     
