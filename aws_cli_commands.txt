@@ -1,0 +1,4 @@
+ $aws ec2 create-security-group --group-name MSG
+ $aws ec2 authorize-security-group-ingress --group-id sg-04be96077e6a538f4 --protocol tcp --port 22 --cidr 0.0.0.0/0 
+ $aws ec2 authorize-security-group-ingress --group-id sg-04be96077e6a538f4 --protocol tcp --port 80 --cidr 0.0.0.0/0 
+ $aws ec2 run-instances --image-id ami-db710fa3 --count 1 --instance-type t2.micro --key-name mykeypair --security-group-ids sg-04be96077e6a538f4 --subnet-id subnet-c883e9b1

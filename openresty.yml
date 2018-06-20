@@ -1,0 +1,5 @@
+- hosts: local
+  tasks:
+    - name: install openresty
+      command: sh /home/sumanth/openresty/install.sh
+    
