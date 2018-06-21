@@ -1,3 +1,0 @@
-FROM openresty/openresty:trusty
-MAINTENER Sumanth <sumanth.kesireddy@gmail.com>
-
